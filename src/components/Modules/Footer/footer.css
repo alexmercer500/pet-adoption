@@ -37,12 +37,14 @@
     font-weight: 600;
     transition: 200ms linear;
 }
+.down-logo p {
+    max-width: 300px;
+}
 @media (hover:hover) {
     .social-media img:hover {
         transform: translateY(-10px);
     }
     .footer-link ul li:hover {
        color: var(--blue);
-       
     }
 }

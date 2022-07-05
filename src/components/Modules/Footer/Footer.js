@@ -12,11 +12,11 @@ const Footer = () => {
         <div className='footer-section '>
             <section className='text-center lg:flex'>
                 <div className='down-logo'>
-                    <h1 className='logo sm:text-center flex items-center text-xl'>
+                    <h1 className='logo sm:text-center w-fit m-auto lg:w-full flex items-center text-xl file'>
                         <img className='w-10 mr-2' src={logo} alt='logo-image of page' />
                         <span className='mr-1'> Pet </span> Store
                     </h1>
-                    <p className='text-left mt-4 font-semibold'>&#169; 2022 All Right Reserved <br/> and Owned by Creater of site</p>
+                    <p className='hidden lg:block sm:text-left mt-4 font-semibold '>&#169; 2022 All Right Reserved and Owned by Creater of site</p>
                 </div>
                 <div className='footer-link w-fit mx-auto flex text-left'>
                     <ul>
