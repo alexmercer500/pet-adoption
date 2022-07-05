@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --text-color: #000;
+    --back-c: #fff;
+    --blue: #3c93c9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gantari', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+    padding: 0.25em 0.5em;
+    font-size: 1.2rem;
+    background-color: teal;
+    border-radius: 0.2em;
+    width: 100px;
+    color: #fff;
+    transition: 100ms linear;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (hover:hover) {
+    button:hover {
+        background-color: #fff;
+        outline: 1px solid teal;
+        color: teal;
+    }
 }

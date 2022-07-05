@@ -1,0 +1,118 @@
+.hero-page {
+    background-image: url('../../Dogs/Pairs/dogs2.jpg');
+    min-height: 500px;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+.heading {
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 2.5em;
+}
+
+.pet-find {
+    margin: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+    max-width: 220px;
+    margin-inline: auto;
+}
+
+.pet-find figure {
+    outline: 2px solid var(--text-color);
+    border-radius: 0.5em;
+    text-align: center;
+    max-height: 100px;
+    max-width: 100px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-find figcaption {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+}
+
+.pet-find figure:nth-child(1) {
+    fill: var(--blue);
+    outline: 2px solid var(--blue);
+}
+
+.pet-find figure:nth-child(2) {
+    fill: #FF714C;
+    outline: 2px solid #FF714C;
+}
+
+.pet-find figure:nth-child(3) {
+    fill: #eebe22;
+    outline: 2px solid #eebe22;
+}
+
+.pet-find figure:nth-child(4) {
+    fill: #175c05;
+    outline: 2px solid #175c05;
+}
+
+svg {
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width:60em) {
+    .heading {
+        margin-top: 5em;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0.25em 0.5em;
+        outline: 5px solid #fff;
+        outline-offset: 5px;
+        border-radius: 0.25em;
+    }
+
+    .pet-find {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+        margin-inline: auto;
+    }
+    .pet-find figure {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    svg {
+        width: 150px;
+        height: 150px;
+    }
+    .pet-find figure:nth-child(1),
+    .pet-find figure:nth-child(2),
+    .pet-find figure:nth-child(3),
+    .pet-find figure:nth-child(4) {
+        cursor: pointer;
+        fill: var(--text-color);
+        outline: 2px solid var(--text-color);
+        transition: 200ms linear;
+    }
+    .pet-find figure:nth-child(1):hover {
+        fill: var(--blue);
+        outline: 2px solid var(--blue);
+    }
+    
+    .pet-find figure:nth-child(2):hover {
+        fill: #FF714C;
+        outline: 2px solid #FF714C;
+    }
+    
+    .pet-find figure:nth-child(3):hover {
+        fill: #eebe22;
+        outline: 2px solid #eebe22;
+    }
+    
+    .pet-find figure:nth-child(4):hover {
+        fill: #175c05;
+        outline: 2px solid #175c05;
+    }
+    
+}

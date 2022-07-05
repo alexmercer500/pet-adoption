@@ -1,0 +1,148 @@
+.header-component {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-bar {
+    position: fixed;
+    inset: 0 0 0 100%;
+    opacity: 0;
+    transition: 250ms linear;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.nav-bar img {
+    width: 40px;
+    margin-right: 0.5em;
+}
+
+.nav-bar li {
+    margin-inline: 1em;
+    padding: 0.20em;
+    cursor: pointer;
+}
+
+.sub-menu li {
+    display: flex;
+    align-items: center;
+}
+
+/*  Main-menu active?ionactive Styling */
+.nav-bar.active {
+    inset: 0;
+    opacity: 1;
+}
+
+/*  Main-menu active?ionactive Styling */
+
+
+/*  Sub-menu active?ionactive Styling */
+.sub-menu {
+    display: none;
+}
+
+.sub-menu.toggle {
+    display: block;
+}
+
+/*  Sub-menu active?ionactive Styling */
+.user-login {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+@media (min-width:50em) {
+    .header-component {
+        align-items: center;
+        max-width: 1300px;
+        margin-inline: auto;
+    }
+
+    .nav-bar {
+        position: static;
+        opacity: 1;
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+
+    .nav-bar li {
+        margin-inline: 0;
+        padding: 0.20em;
+        transition: 100ms linear;
+    }
+
+    .nav-list {
+        margin-block: 0;
+        display: flex;
+        flex: 2;
+        align-items: center;
+    }
+
+    .nav-toogle {
+        display: none;
+    }
+
+    .submenu-list {
+        position: relative;
+    }
+
+    .sub-menu {
+        position: absolute;
+        min-width: 300px;
+        top: 100%;
+        max-width: fit-content;
+    }
+
+    .sub-menu li {
+        font-size: 1.2rem;
+    }
+
+    .nav-bar li img {
+        width: 30px;
+        margin-right: 0.5em;
+    }
+
+    .sub-menu.toggle {
+        display: none;
+    }
+
+    /* on hover display */
+    .nav-list li:nth-child(2):hover .sub-menu {
+        display: block;
+    }
+
+    .sub-menu li:hover {
+        transform: translateX(1em);
+    }
+
+    /* on hover display */
+    .nav-bar img {
+        width: 40px;
+        margin-right: 0.5em;
+    }
+
+    .user-login {
+        flex: 1;
+    }
+
+    .user-login button {
+        margin-block: 0.2em;
+    }
+}
+
+@media (min-width:70em) {
+    .nav-bar li {
+        margin-right: 1em;
+    }
+}

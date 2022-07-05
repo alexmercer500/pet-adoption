@@ -1,0 +1,48 @@
+.footer-section {
+    background-color: antiquewhite;
+    padding: 1.5em 0.75em;
+}
+
+.footer-section section {
+    max-width: 1200px;
+    margin-inline: auto;
+    align-items: flex-start;
+}
+
+.down-logo {
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.social-media {
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.social-media img {
+    width: 40px;
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+.footer-link ul {
+    padding: 0.75em;
+    margin: 0.5em;
+}
+
+.footer-link ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.25em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 200ms linear;
+}
+@media (hover:hover) {
+    .social-media img:hover {
+        transform: translateY(-10px);
+    }
+    .footer-link ul li:hover {
+       color: var(--blue);
+       
+    }
+}

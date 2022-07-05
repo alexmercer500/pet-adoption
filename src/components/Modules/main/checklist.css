@@ -1,0 +1,24 @@
+.adoption-checklist {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.adoption-checklist section {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+.adoption-checklist section p {
+    min-height: 150px;
+}
+
+.adoption-checklist section button {
+    min-width: fit-content;
+}
+
+@media (min-width:60em) {
+    .adoption-checklist section {
+        min-height: 250px;
+    }
+}

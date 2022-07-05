@@ -1,0 +1,57 @@
+.Photo-section {
+    max-width: 1300px;
+    margin-inline: auto;
+    text-align: center;
+}
+.Photo-section figure {
+    cursor: pointer;
+    border-radius: 0.25em;
+    text-align: center;
+    min-height: 480px;
+    background-color: #FFE7D3;
+    transition: 200ms linear;
+}
+.Photo-section figure img {
+    padding: 0.5em;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.Photo-section figure figcaption {
+    font-size: 1.5rem; 
+}
+.Photo-section figure button {
+    min-width: fit-content;
+}
+@media (min-width:60em) {
+    .Photo-section figure {
+        min-height: 450px;
+    }
+    .Photo-section figure img {
+        outline: 2px solid var(--text-color);
+        outline-offset: -20px;
+    }
+    .know-more button {
+        transform: translatex(200px);
+        opacity: 0;
+        transition: 200ms linear;
+    }
+    .know-more figcaption {
+        transform: translateX(150%);
+        transition: 200ms linear;
+    }
+}
+/*  hover effect */
+
+@media (hover:hover) {
+    /* .Photo-section figure:hover {
+        filter: grayscale(0.5);
+    } */
+    .Photo-section figure:hover .know-more figcaption{
+        transform: translateX(0);
+    }
+    .Photo-section figure:hover .know-more button{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}

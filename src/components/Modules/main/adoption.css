@@ -1,0 +1,74 @@
+.adoption-guide section {
+    position: relative;
+    margin: 0.75em;
+    background-color: antiquewhite;
+}
+
+.adoption-guide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-pet img {
+    position: absolute;
+    width: 100px;
+    top: 35%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    outline: 5px solid #fff;
+}
+
+.adoption-guide h2 {
+    background-color: var(--blue);
+    width: 100%;
+}
+
+@media (min-width:50em) {
+    .adoption-guide {
+        max-width: 1000px;
+        margin-inline: auto;
+        display: flex;
+    }
+
+    .about-pet {
+        display: flex;
+        margin-top: 1em;
+        padding-inline: 1.5em;
+        text-align: left;
+    }
+
+    .about-pet article {
+        max-width: 300px;
+        margin-left: auto;
+    }
+
+    .about-pet img {
+        position: static;
+        border-radius: 0;
+        transform: translateX(0);
+        outline: none;
+    }
+
+    .about-pet h1 {
+        margin: 0;
+    }
+
+    .pet-show {
+        max-height: 350px;
+    }
+}
+
+@media (hover:hover) {
+    .adoption-guide section h2 {
+        transition: 250ms linear;
+        cursor: pointer;
+    }
+
+    .adoption-guide section h2:hover {
+        background-color: #fff;
+        color: var(--blue);
+        outline: 2px solid var(--blue);
+        outline-offset: -2px;
+    }
+}
