@@ -7,13 +7,13 @@
     cursor: pointer;
     border-radius: 0.25em;
     text-align: center;
-    min-height: 480px;
+    min-height: 420px;
     background-color: #FFE7D3;
     transition: 200ms linear;
 }
 .Photo-section figure img {
     padding: 0.5em;
-    max-height: 400px;
+    max-height: 350px;
     width: 100%;
     object-fit: cover;
 }
@@ -25,9 +25,10 @@
 }
 @media (min-width:60em) {
     .Photo-section figure {
-        min-height: 450px;
+        min-height: 320px;
     }
     .Photo-section figure img {
+        max-height: 280px;
         outline: 2px solid var(--text-color);
         outline-offset: -20px;
     }
