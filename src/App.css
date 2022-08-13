@@ -11,7 +11,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gantari', sans-serif;
+    scroll-behavior: smooth;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 button {
     padding: 0.25em 0.5em;
@@ -28,5 +34,10 @@ button {
         background-color: #fff;
         outline: 1px solid teal;
         color: teal;
+    }
+    .top-link:hover span{
+        visibility: visible;
+        color: var(--blue);
+        font-weight: 600;
     }
 }

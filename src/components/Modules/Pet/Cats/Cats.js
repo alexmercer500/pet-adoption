@@ -16,7 +16,7 @@ const Cats = () => {
                         <h1>Name: {cat.name}</h1>
                         <h2>Age: {cat.age}</h2>
                         <h2>Gender: {cat.gender}</h2>
-                        {/* <h2>Description: {cat.description}</h2> */}
+                        <h2>Description: {cat.description}</h2>
                         <button>Get More Info</button>
                     </div>
                 </section>

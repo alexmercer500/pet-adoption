@@ -5,6 +5,7 @@ import Footer from './components/Modules/Footer/Footer';
 import Main from './components/Modules/main/Main';
 import Dogs from './components/Modules/Pet/Dogs/Dogs';
 import Cats from './components/Modules/Pet/Cats/Cats';
+import upArrow from './components/Icon assets/SVG/up-arrow.svg'
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <Route exact path='/Cats' element={<Cats />} />
       </Routes>
       <Footer />
+      <a className='top-link w-10 sm:w-16 cursor-pointer fixed bottom-10  right-1 z-20' href='#'><img  src={upArrow} alt='go to top of page' />
+        <span className='text-sm invisible ease-linear '>Go to Top</span>
+      </a>
     </div>
   );
 }

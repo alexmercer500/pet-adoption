@@ -34,7 +34,12 @@
     display: flex;
     align-items: center;
 }
+.nav-toogle {
 
+    padding: 0.10em;
+    border-radius: 10px;
+    background-color: var(--back-c);
+}
 /*  Main-menu active?ionactive Styling */
 .nav-bar.active {
     inset: 0;

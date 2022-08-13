@@ -15,7 +15,7 @@ const Dogs = () => {
                         <h1>Name: {dog.name}</h1>
                         <h2>Age: {dog.age}</h2>
                         <h2>Gender: {dog.gender}</h2>
-                        {/* <h2>Description: {dog.description}</h2> */}
+                        <h2>Description: {dog.description}</h2> 
                         <button className=''>Get More Info</button>
                     </div>
                 </section>

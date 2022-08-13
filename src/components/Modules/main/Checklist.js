@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 const Checklist = () => {
     return (
-        <div className='adoption-checklist text-center'>
+        <div className='adoption-checklist text-center z-10'>
             <h1 className='text-3xl p-10'>Are you Planning to Adopt a Pet</h1>
 
             <Swiper

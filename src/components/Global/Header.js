@@ -16,24 +16,25 @@ const Header = () => {
 
     const subMenuToggle = () => { subMenuRef.current.classList.toggle('toggle') }
     const menuToggle = () => { mainMenuRef.current.classList.toggle('active') }
+    const menuCLose = ()=> { mainMenuRef.current.classList.remove('active') }
     return (
         <div className='header-component flex justify-between z-10 px-4 py-4'>
             <Link to='/'> <h1 className='logo sm:text-center flex items-center text-xl'>
                 <img className='w-10 mr-2' src={logo} alt='logo-image of page' />
                 <span className='mr-1'> Pet </span> Store</h1></Link>
-            <nav className='nav-bar bg-white' ref={mainMenuRef}>
+            <nav className='nav-bar bg-white z-30' ref={mainMenuRef}>
                 <ul className='nav-list text-3xl sm:text-2xl my-20 ' >
-                    <Link to='/'> <li>Home</li></Link>
+                    <Link to='/'> <li onClick={menuCLose}>Home</li></Link>
                     <li className='submenu-list'><span onClick={subMenuToggle}> Your Pet</span>
                         <ul className='sub-menu px-4 py-2 text-2xl bg-slate-500 sm:py-0 sm:px-0' ref={subMenuRef}>
-                            <Link to='Dogs'>  <li> <img src={dogPic} alt='animal log' /> Dogs</li></Link>
-                            <Link to='Cats'> <li> <img src={catPic} alt='animal log' /> Cats</li></Link>
-                            <Link to='Birds'> <li> <img src={birdPic} alt='animal log' /> Birds</li></Link>
-                            <Link to='Exotic'> <li> <img src={ExoticPic} alt='animal log' /> Exotic Animal</li></Link>
+                            <Link to='Dogs'>  <li onClick={menuCLose}> <img src={dogPic} alt='animal log' /> Dogs</li></Link>
+                            <Link to='Cats'> <li onClick={menuCLose}> <img src={catPic} alt='animal log' /> Cats</li></Link>
+                            <Link to='Birds'> <li onClick={menuCLose}> <img src={birdPic} alt='animal log' /> Birds</li></Link>
+                            <Link to='Exotic'> <li onClick={menuCLose}> <img src={ExoticPic} alt='animal log' /> Exotic Animal</li></Link>
                         </ul>
                     </li>
-                    <Link to='Blog'> <li>Blog</li></Link>
-                    <Link to='About'> <li>About Me</li></Link>
+                    <Link to='Blog'> <li onClick={menuCLose}>Blog</li></Link>
+                    <Link to='About'> <li onClick={menuCLose}>About Me</li></Link>
                 </ul>
                 <div className='user-login text-center  sm:text-right '>
                     <button className='mx-2'>Login</button>
@@ -43,7 +44,7 @@ const Header = () => {
                     <img className='w-20 hidden' src={userPic} alt='user-info' />
                 </div>
             </nav>
-            <div className='nav-toogle z-20' onClick={menuToggle}>
+            <div className='nav-toogle z-30 fixed right-4 ' onClick={menuToggle}>
                 <img className='w-10 h-full' src={navMenu} alt='nav-toogle' />
             </div>
         </div>

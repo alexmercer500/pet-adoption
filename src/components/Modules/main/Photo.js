@@ -12,7 +12,7 @@ const Photo = () => {
     const [getDogData] = useState(allData.dogs);
 
     return (
-        <div className='Photo-section my-10'>
+        <div className='Photo-section my-10 z-10'>
             <h1 className='mt-10 text-4xl py-6'>Meet Few of Our Proud Boys</h1>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
