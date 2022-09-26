@@ -47,4 +47,9 @@
     .footer-link ul li:hover {
        color: var(--blue);
     }
+    .top-link:hover span{
+        visibility: visible;
+        color: var(--blue);
+        font-weight: 600;
+    }
 }

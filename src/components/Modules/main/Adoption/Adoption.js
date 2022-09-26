@@ -1,9 +1,9 @@
 import React from 'react'
-import './adoption.css'
-import dogPic3 from '../../Dogs/Dogs/dog3.jpg'
-import catPic3 from '../../Dogs/Cats/cat11.jpg'
-import dogSVG from '../../Icon assets/dog.svg'
-import catSVG from '../../Icon assets/catSVG.svg'
+import '../Adoption/adoption.css'
+import dogPic3 from '../../../Dogs/Dogs/dog3.jpg'
+import catPic3 from '../../../Dogs/Cats/cat11.jpg'
+import dogSVG from '../../../Icon assets/dog.svg'
+import catSVG from '../../../Icon assets/catSVG.svg'
 
 const Adoption = () => {
     return (

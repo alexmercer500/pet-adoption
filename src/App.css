@@ -35,9 +35,4 @@ button {
         outline: 1px solid teal;
         color: teal;
     }
-    .top-link:hover span{
-        visibility: visible;
-        color: var(--blue);
-        font-weight: 600;
-    }
 }

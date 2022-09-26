@@ -15,7 +15,10 @@ const Header = () => {
     const mainMenuRef = useRef()
 
     const subMenuToggle = () => { subMenuRef.current.classList.toggle('toggle') }
-    const menuToggle = () => { mainMenuRef.current.classList.toggle('active') }
+    const menuToggle = () => { 
+        mainMenuRef.current.classList.toggle('active') 
+        subMenuRef.current.classList.remove('toggle')
+        }
     const menuCLose = ()=> { mainMenuRef.current.classList.remove('active') }
     return (
         <div className='header-component flex justify-between z-10 px-4 py-4'>

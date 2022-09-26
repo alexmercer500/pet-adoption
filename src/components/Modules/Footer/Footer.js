@@ -6,6 +6,7 @@ import instagram from '../../Icon assets/Social/instagram.svg'
 import pintrest from '../../Icon assets/Social/pintrest.svg'
 import reddit from '../../Icon assets/Social/reddit.svg'
 import youtube from '../../Icon assets/Social/youtube.svg'
+import upArrow from '../../Icon assets/SVG/up-arrow.svg'
 
 const Footer = () => {
     return (
@@ -39,7 +40,8 @@ const Footer = () => {
                     <img src={pintrest} alt='pinterest' />
                     <img src={youtube} alt='youtube' />
                 </div>
-
+                <a className='top-link w-10 sm:w-16 cursor-pointer fixed bottom-10  right-1 z-20' href='#'><img  src={upArrow} alt='go to top of page' />
+                <span className='text-sm invisible ease-linear '>Go to Top</span></a>
             </section>
         </div>
     )

@@ -38,22 +38,22 @@
     font-size: clamp(1rem, 5vw, 1.25rem);
 }
 
-.pet-find figure:nth-child(1) {
+.pet-find .dogs {
     fill: var(--blue);
     outline: 2px solid var(--blue);
 }
 
-.pet-find figure:nth-child(2) {
+.pet-find .cats{
     fill: #FF714C;
     outline: 2px solid #FF714C;
 }
 
-.pet-find figure:nth-child(3) {
+.pet-find .birds {
     fill: #eebe22;
     outline: 2px solid #eebe22;
 }
 
-.pet-find figure:nth-child(4) {
+.pet-find .exotic {
     fill: #175c05;
     outline: 2px solid #175c05;
 }
@@ -95,24 +95,24 @@ svg {
         outline: 2px solid var(--text-color);
         transition: 200ms linear;
     }
-    .pet-find figure:nth-child(1):hover {
+    .pet-find .dogs:hover {
         fill: var(--blue);
         outline: 2px solid var(--blue);
     }
     
-    .pet-find figure:nth-child(2):hover {
+    .pet-find .cats:hover {
         fill: #FF714C;
         outline: 2px solid #FF714C;
     }
     
-    .pet-find figure:nth-child(3):hover {
+    .pet-find .birds:hover {
         fill: #eebe22;
         outline: 2px solid #eebe22;
     }
     
-    .pet-find figure:nth-child(4):hover {
+    .pet-find .exotic:hover {
         fill: #175c05;
         outline: 2px solid #175c05;
-    }
+    }   
     
 }
