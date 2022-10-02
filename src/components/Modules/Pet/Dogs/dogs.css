@@ -37,7 +37,8 @@
 }
 @media (hover:hover) {
     .canine-cards:hover img {
-        /* transform: scale(1.1); */
+        transform: scale(1.1);
+        overflow: hidden;
         object-position: 0 0;
     }
 }

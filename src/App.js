@@ -1,24 +1,27 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
 import Header from './components/Global/Header';
+import Dynamic from './components/Global/Dynamic';
 import Footer from './components/Modules/Footer/Footer';
-import Main from './components/Modules/main/Main';
-import Dogs from './components/Modules/Pet/Dogs/Dogs';
-import Cats from './components/Modules/Pet/Cats/Cats';
-import Birds from './components/Modules/Pet/Birds/Birds';
-import Exotic from './components/Modules/Pet/Exotic/Exotic';
+import Modal from './components/Modules/main/modal/Modal';
+import { useState } from 'react';
 
 function App() {
+  const [modalUp, setModalUp] = useState(false);
+  const [order, setOrder] = useState(0)
+  const modelOpen = () => {
+    setModalUp(true)
+    setOrder(1)
+  }
+  const modelOpenTwo = () =>{
+    setModalUp(true )
+    setOrder(2)
+  }
+  const resetModel = () => {setModalUp(false)}
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route exact path='/' element={<Main />} />
-        <Route exact path='/Dogs' element={<Dogs />} />
-        <Route exact path='/Cats' element={<Cats />} />
-        <Route exact path='/Birds' element={<Birds />} />
-        <Route exact path='/Exotic' element={<Exotic />} />
-      </Routes>
+      <Header modelToggle={modelOpen} modelToggleTwo = {modelOpenTwo}/>
+      <Dynamic />
+      {modalUp && <Modal modelClose={resetModel} order={order} inMod={modelOpen} upMod={modelOpenTwo}/>}
       <Footer />
     </div>
   );

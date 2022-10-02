@@ -1,5 +1,4 @@
 .header-component {
-    max-width: 1200px;
     background-color: rgba(255, 255, 255, 1);
 }
 
@@ -34,8 +33,7 @@
     display: flex;
     align-items: center;
 }
-.nav-toogle {
-
+.nav-toggle {
     padding: 0.10em;
     border-radius: 10px;
     background-color: var(--back-c);
@@ -46,10 +44,6 @@
     opacity: 1;
 }
 
-/*  Main-menu active?ionactive Styling */
-
-
-/*  Sub-menu active?ionactive Styling */
 .sub-menu {
     display: none;
 }
@@ -68,7 +62,7 @@
 @media (min-width:50em) {
     .header-component {
         align-items: center;
-        max-width: 1300px;
+        /* max-width: 1300px; */
         margin-inline: auto;
     }
 

@@ -1,20 +1,13 @@
-import React from 'react'
 import './footer.css'
-import logo from '../../Icon assets/animal-footstep.svg'
-import facebook from '../../Icon assets/Social/facebook.svg'
-import instagram from '../../Icon assets/Social/instagram.svg'
-import pintrest from '../../Icon assets/Social/pintrest.svg'
-import reddit from '../../Icon assets/Social/reddit.svg'
-import youtube from '../../Icon assets/Social/youtube.svg'
-import upArrow from '../../Icon assets/SVG/up-arrow.svg'
-
+import iconSet from '../../Global/icon'
 const Footer = () => {
+
     return (
         <div className='footer-section '>
             <section className='text-center lg:flex'>
                 <div className='down-logo'>
                     <h1 className='logo sm:text-center w-fit m-auto lg:w-full flex items-center text-xl file'>
-                        <img className='w-10 mr-2' src={logo} alt='logo-image of page' />
+                        <img className='w-10 mr-2' src={iconSet.logo} alt='logo of page' />
                         <span className='mr-1'> Pet </span> Store
                     </h1>
                     <p className='hidden lg:block sm:text-left mt-4 font-semibold '>&#169; 2022 All Right Reserved and Owned by Creater of site</p>
@@ -34,14 +27,16 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='social-media flex gap-4 my-4'>
-                    <img src={facebook} alt='Facebook' />
-                    <img src={instagram} alt='instagram' />
-                    <img src={reddit} alt='reddit' />
-                    <img src={pintrest} alt='pinterest' />
-                    <img src={youtube} alt='youtube' />
+                    <img src={iconSet.facebook} alt='Facebook' />
+                    <img src={iconSet.instagram} alt='instagram' />
+                    <img src={iconSet.reddit} alt='reddit' />
+                    <img src={iconSet.pintrest} alt='pinterest' />
+                    <img src={iconSet.youtube} alt='youtube' />
                 </div>
-                <a className='top-link w-10 sm:w-16 cursor-pointer fixed bottom-10  right-1 z-20' href='#'><img  src={upArrow} alt='go to top of page' />
-                <span className='text-sm invisible ease-linear '>Go to Top</span></a>
+                {/* <div className='hidden'>
+                    <a className='top-link w-10 sm:w-16 cursor-pointer fixed bottom-10  right-1 z-20' href='#'><img src={upArrow} alt='go to top of page' />
+                        <span className='text-sm invisible ease-linear '>Go to Top</span></a>
+                </div> */}
             </section>
         </div>
     )
