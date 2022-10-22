@@ -3,9 +3,11 @@ import Header from './components/Global/Header';
 import Dynamic from './components/Global/Dynamic';
 import Footer from './components/Modules/Footer/Footer';
 import Modal from './components/Modules/main/modal/Modal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { googleLogout } from '@react-oauth/google';
 
 function App() {
+
   const [modalUp, setModalUp] = useState(false);
   const [order, setOrder] = useState(0)
   const modelOpen = () => {

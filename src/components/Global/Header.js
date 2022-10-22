@@ -1,5 +1,6 @@
 import { useRef} from 'react'
 import { Link } from 'react-router-dom'
+import User from '../Modules/main/user/User'
 import iconSet from './icon'
 import './header.css'
 
@@ -15,7 +16,7 @@ const Header = ({modelToggle, modelToggleTwo}) => {
         }
     const menuCLose = ()=> { mainMenuRef.current.classList.remove('active') }
     return (
-        <div className='header-component flex justify-between z-10 px-4 py-4'>
+        <header className='header-component flex justify-between z-10 px-4 py-4'>
             <Link to='/'> <div className='logo sm:text-center flex items-center text-xl'>
                 <img className='w-10 mr-2' src={iconSet.logo} alt='logo of page' />
                 <span className='mr-1'> Pet </span> Store</div>
@@ -35,17 +36,15 @@ const Header = ({modelToggle, modelToggleTwo}) => {
                     <Link to='About'> <li onClick={menuCLose}>About Me</li></Link>
                 </ul>
                 <div className='user-login text-center sm:text-right '>
-                    <button className='mx-2' onClick={modelToggle}>Login</button>
-                    <button className='mx-2' onClick={modelToggleTwo}>Sign Up</button>
+                    <button className='mx-2' onClick={modelToggleTwo}>Login</button>
+                    <button className='mx-2' onClick={modelToggle}>Sign Up</button>
                 </div>
-                <div className='user-info'>
-                    <img className='w-20 hidden' src={iconSet.userPic} alt='user-info' />
-                </div>
+                {/* <User/> */}
             </nav>
             <div className='nav-toggle z-30 md:hidden' onClick={menuToggle}>
                 <img className='w-10 h-full' src={iconSet.navMenu} alt='nav-toogle' />
             </div>
-        </div>
+        </header>
     )
 }
 
