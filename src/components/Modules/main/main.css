@@ -1,7 +1,7 @@
 .hero-page {
     background-image: url('../../Dogs/Pairs/dogs2.jpg');
     min-height: 500px;
-    background-position: 0;
+    background-position: center 35%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: auto;

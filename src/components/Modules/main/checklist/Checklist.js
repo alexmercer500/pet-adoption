@@ -1,4 +1,3 @@
-import React from 'react'
 import './checklist.css'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,22 +7,21 @@ import 'swiper/css/pagination';
 
 const Checklist = () => {
     return (
-        <div className='adoption-checklist text-center z-10'>
+        <div className='adoption-checklist text-center z-10 px-3 xl:px-0'>
             <h1 className='text-3xl p-10'>Are you Planning to Adopt a Pet</h1>
 
             <Swiper
-                // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={50}
+                spaceBetween={12}
                 slidesPerView={1}
                 breakpoints={{
                     580: {
                         slidesPerView: 2,
-                        spaceBetween: 30
+                        spaceBetween: 12
                     },
                     1200: {
                         slidesPerView: 3,
-                        spaceBetween: 30
+                        spaceBetween: 12
                     },
                 }}
                 pagination={{ clickable: true }}
@@ -52,9 +50,6 @@ const Checklist = () => {
                     <button>Learn More</button>
                 </section></SwiperSlide>
             </Swiper>
-
-
-
         </div>
     )
 }

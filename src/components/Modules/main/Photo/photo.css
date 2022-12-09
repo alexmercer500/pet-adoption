@@ -6,16 +6,14 @@
 .Photo-section figure {
     cursor: pointer;
     border-radius: 0.25em;
-    text-align: center;
-    min-height: 420px;
     background-color: #FFE7D3;
     transition: 200ms linear;
+    max-height: 450px;
 }
 .Photo-section figure img {
-    padding: 0.5em;
-    max-height: 350px;
-    width: 100%;
+    border-radius: 0.25em;
     object-fit: cover;
+    width: 100%;
 }
 .Photo-section figure figcaption {
     font-size: 1.5rem; 
@@ -25,34 +23,38 @@
 }
 @media (min-width:60em) {
     .Photo-section figure {
-        min-height: 320px;
+        min-height: 342px;
+        position: relative;
     }
     .Photo-section figure img {
         max-height: 280px;
         outline: 2px solid var(--text-color);
         outline-offset: -20px;
     }
-    .know-more button {
-        transform: translatex(200px);
-        opacity: 0;
+    .know-more button, .know-more figcaption {
+        position: absolute;
         transition: 200ms linear;
+    }
+    .know-more button {
+        right: 50%;
+        translate: 50%;
+        bottom: -15%;
+        z-index: 20;
+        opacity: 0;
     }
     .know-more figcaption {
-        transform: translateX(150%);
-        transition: 200ms linear;
+        left: 50%;
+        translate: -50%;
     }
 }
-/*  hover effect */
 
 @media (hover:hover) {
-    /* .Photo-section figure:hover {
-        filter: grayscale(0.5);
-    } */
-    .Photo-section figure:hover .know-more figcaption{
-        transform: translateX(0);
-    }
-    .Photo-section figure:hover .know-more button{
-        transform: translatex(0);
+    .Photo-section figure:hover .know-more button{  
+        bottom: 8px;
         opacity: 1;
+    }
+    .Photo-section figure:hover .know-more figcaption {
+        z-index: -1;
+        opacity: 0;
     }
 }

@@ -1,7 +1,4 @@
 import './modal.css'
-import Login from '../../../utils/auth/Login'
-import Logout from '../../../utils/auth/Logout'
-import { googleLogout } from '@react-oauth/google'
 const Modal = ({ modelClose, order, inMod, upMod }) => {
 
   return (
@@ -39,11 +36,6 @@ const Modal = ({ modelClose, order, inMod, upMod }) => {
                 <div className='mt-4'>
                   <small>Already have an account <a href="/#" className='text-teal-600 underline' onClick={upMod}>Sign In</a></small>
                 </div>
-                <div>
-                  <p>Signup with other client ID</p>
-                  <Login/>
-                  <button onClick={googleLogout}>logout</button>
-                </div>
               </form>
             </fieldset>}
 
@@ -70,7 +62,6 @@ const Modal = ({ modelClose, order, inMod, upMod }) => {
                 </div>
                 <div>
                   <p>Signup with other client ID</p>
-                  <Login/>
                 </div>
               </form>
             </fieldset>

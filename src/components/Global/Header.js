@@ -1,6 +1,6 @@
 import { useRef} from 'react'
 import { Link } from 'react-router-dom'
-import User from '../Modules/main/user/User'
+// import User from '../Modules/main/user/User'
 import iconSet from './icon'
 import './header.css'
 

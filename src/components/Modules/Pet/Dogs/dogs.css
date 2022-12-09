@@ -1,16 +1,6 @@
-.canine-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
-    margin: 1em;
-    max-width: 1200px;
-    margin-inline: auto;
-   
-}
 .canine-cards {
     background-color: antiquewhite;
     cursor: pointer;
-    overflow: hidden;
     transition: 200ms linear;
 }
 .canine-cards img {
@@ -20,25 +10,9 @@
     object-position:0 10%;
     transition: 200ms linear;
 }
-
-.canine-cards button {
-    min-width: fit-content;
-}
-
-@media (min-width:40em) {
-    .canine-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width:60em) {
-    .canine-section {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 @media (hover:hover) {
     .canine-cards:hover img {
         transform: scale(1.1);
-        overflow: hidden;
         object-position: 0 0;
     }
 }

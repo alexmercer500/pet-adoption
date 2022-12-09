@@ -11,22 +11,23 @@ const Cats = () => {
     return (
         <div>
             <Searchbox />
-            <div className='canine-section'>
+            <section className='canine-section grid md:grid-cols-2 px-4 lg:grid-cols-3 gap-4 mx-auto p-5'>
                 {catData.map(cat => {
-                    return <section className='canine-cards p-2 rounded-md relative' key={cat.id}>
-                        <img src={cat.photo} alt={cat.name} />
+                    return <div className='canine-cards p-2 rounded-md relative' key={cat.id}>
+                        <div className='max-h-64 overflow-hidden rounded-t-md'>
+                            <img src={cat.photo} alt={cat.name} />
+                        </div>
                         <div>
                             <h1>Name: {cat.name}</h1>
                             <h2>Age: {cat.age}</h2>
                             <h2>Gender: {cat.gender}</h2>
-                            <p>Description: {cat.description}</p>
-                            <div className='h-10'>
-                                <button className='absolute bottom-2 left-2 right-auto'>Get More Info</button>
-                            </div>
                         </div>
-                    </section>
+                        <div>
+                            <button className='w-fit'>Get More Info</button>
+                        </div>
+                    </div>
                 })}
-            </div>
+            </section>
         </div>
     )
 }

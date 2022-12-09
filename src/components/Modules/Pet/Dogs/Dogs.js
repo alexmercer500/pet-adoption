@@ -9,21 +9,24 @@ const Dogs = () => {
 
     return (
         <div>
-            <Searchbox/>    
-            <div className='canine-section '>
+            <Searchbox />
+            <section className='canine-section grid md:grid-cols-2 px-4 lg:grid-cols-3 gap-4 mx-auto p-5'>
 
                 {dogData.map(dog => {
-                    return <section className='canine-cards rounded-md' key={dog.id}>
-                        <div className='p-2'><img src={dog.photo} alt={dog.name} /></div>
-                        <div className='p-2'>
-                            <h1>Name: {dog.name}</h1>
-                            <h2>Age: {dog.age}</h2>
-                            <h2>Gender: {dog.gender}</h2>
-                            <button className=''>Get More Info</button>
+                    return <div className='canine-cards rounded-md p-2' key={dog.id}>
+                        <div className='max-h-64 overflow-hidden rounded-t-md'>
+                            <img src={dog.photo} alt={dog.name} /></div>
+                        <div>
+                            <p>Name: {dog.name}</p>
+                            <p>Age: {dog.age}</p>
+                            <p>Gender: {dog.gender}</p>
                         </div>
-                    </section>
+                        <div>
+                            <button className='mt-5 w-fit'>Get More Info</button>
+                        </div>
+                    </div>
                 })}
-            </div>
+            </section>
         </div>
     )
 }

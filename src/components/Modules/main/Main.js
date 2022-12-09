@@ -10,7 +10,7 @@ import Adoption from './Adoption/Adoption';
 const Main = () => {
     return (
         <>
-            <div className='main-template'>
+            <section className='main-template'>
                 <div className='hero-page text-center text-white '>
                     <h1 className='heading text-2xl sm:text-4xl lg:text-6xl  font-semibold'>Find your new best friend</h1>
                 </div>
@@ -38,7 +38,7 @@ const Main = () => {
                 <Photo />
                 <Checklist />
                 <Adoption />
-            </div>
+            </section>
         </>
     )
 }
