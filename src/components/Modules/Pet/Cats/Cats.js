@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../Dogs/dogs.css'
 import './cats.css'
 import allData from '../../../Global/Data'
@@ -10,6 +11,7 @@ const Cats = () => {
     const [catData] = useState(allData.cats)
 
     const { data } = useContext(searchFilter)
+    const Navigate = useNavigate()
 
     return (
         <div>
@@ -17,7 +19,6 @@ const Cats = () => {
             <section className='canine-section grid md:grid-cols-2 px-4 lg:grid-cols-3 gap-4 mx-auto p-5'>
                 {catData.filter((cData) =>
                     cData.name.toLowerCase().includes(data)
-                    // console.log(cData.name.includes(data), cData.name);
                 ).map(cat =>
                     <div className='canine-cards p-2 rounded-md relative' key={cat.id}>
                         <div className='max-h-64 overflow-hidden rounded-t-md'>
@@ -29,7 +30,9 @@ const Cats = () => {
                             <h2>Gender: {cat.gender}</h2>
                         </div>
                         <div>
-                            <button className='w-fit'>Get More Info</button>
+                            <button className='w-fit'
+                            onClick={() => Navigate('/petinfo',{state:cat})}
+                            >Get More Info</button>
                         </div>
                     </div>
                 )

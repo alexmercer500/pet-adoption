@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './dogs.css'
 import allData from '../../../Global/Data'
 import Searchbox from '../../main/searchbox/Searchbox'
@@ -8,6 +9,7 @@ const Dogs = () => {
     const [dogData] = useState(allData.dogs)
     const { data } = useContext(searchFilter)
 
+    const Navigate = useNavigate()
     return (
         <div>
             <Searchbox />
@@ -24,7 +26,9 @@ const Dogs = () => {
                             <p>Gender: {dog.gender}</p>
                         </div>
                         <div>
-                            <button className='mt-5 w-fit'>Get More Info</button>
+                            <button className='mt-5 w-fit'
+                                onClick={() => Navigate('/petinfo',{state:dog})}
+                            >Get More Info</button>
                         </div>
                     </div>
                 )}

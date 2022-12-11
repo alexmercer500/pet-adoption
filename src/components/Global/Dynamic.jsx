@@ -8,13 +8,13 @@ import Birds from '../Modules/Pet/Birds/Birds';
 import Exotic from '../Modules/Pet/Exotic/Exotic';
 import Blogs from '../Modules/Blogs/Blogs'
 import About from '../Modules/About/About'
+import PetInfo from '../Modules/Pet/PetInfo/PetInfo';
 
 const Dynamic = () => {
 
   const [data, setdata] = useState("")
   function searchPara(searchData) {
     setdata(searchData)
-    // console.warn(data);
   }
 
   return (
@@ -28,6 +28,7 @@ const Dynamic = () => {
           <Route exact path='/Exotic' element={<Exotic />} />
           <Route exact path='/Blog' element={<Blogs />} />
           <Route exact path='/About' element={<About />} />
+          <Route exact path='/petinfo' element={<PetInfo />} />
         </Routes>
       </searchFilter.Provider>
     </div>
