@@ -4,7 +4,7 @@ const SignUp = ({ logMethod }) => {
   const { setLogUser, setLogType } = logMethod
   return (
     <section className='fixed inset-0 bg-stone-600/60 z-50 grid place-content-center'>
-      <div className='model-bg p-6 shadow-2xl max-w-[500px] mx-auto'>
+      <div className='model-bg p-6 shadow-2xl'>
         <div className='text-end'><button className='px-2 w-fit' onClick={() => { setLogUser(false) }}>X</button></div>
         <fieldset>
           <form>
