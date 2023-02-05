@@ -18,7 +18,7 @@ const Dynamic = () => {
   }
 
   return (
-    <div>
+    <div className='mx-auto'>
       <searchFilter.Provider value={{ searchPara, data }}>
         <Routes>
           <Route exact path='/' element={<Main />} />

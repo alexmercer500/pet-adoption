@@ -8,24 +8,12 @@ import Modal from './components/Modules/main/modal/Modal';
 
 function App() {
 
-	const [modalUp, setModalUp] = useState(false);
-	const [order, setOrder] = useState(0)
-	const modelOpen = () => {
-		setModalUp(true)
-		setOrder(1)
-	}
-	const modelOpenTwo = () => {
-		setModalUp(true)
-		setOrder(2)
-	}
-	const resetModel = () => { setModalUp(false) }
-
 	return (
 		<Router>
 			<div className="App">
-				<Header modelToggle={modelOpen} modelToggleTwo={modelOpenTwo} />
+				<Header />
 				<Dynamic />
-				{modalUp ? <Modal modelClose={resetModel} order={order} inMod={modelOpen} upMod={modelOpenTwo} /> : null}
+				{/* {modalUp ? <Modal modelClose={resetModel} order={order} inMod={modelOpen} upMod={modelOpenTwo} /> : null} */}
 				<Footer />
 			</div>
 		</Router>

@@ -37,21 +37,6 @@ const Cats = () => {
                     </div>
                 )
                 }
-                {/* {catData.map(cat => {
-                    return <div className='canine-cards p-2 rounded-md relative' key={cat.id}>
-                        <div className='max-h-64 overflow-hidden rounded-t-md'>
-                            <img src={cat.photo} alt={cat.name} />
-                        </div>
-                        <div>
-                            <h1>Name: {cat.name}</h1>
-                            <h2>Age: {cat.age}</h2>
-                            <h2>Gender: {cat.gender}</h2>
-                        </div>
-                        <div>
-                            <button className='w-fit'>Get More Info</button>
-                        </div>
-                    </div>
-                })} */}
             </section>
         </div>
     )
